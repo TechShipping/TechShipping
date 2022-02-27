@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "TechShipping",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

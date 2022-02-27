@@ -1,0 +1,7 @@
+{
+  "name": "TechShipping",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
