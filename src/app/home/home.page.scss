@@ -1,27 +1,294 @@
-#container {
-  text-align: center;
+* {
+  font-family: "RBN31";
+}
+/* Inicia Estilización Del Body */
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+body {
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
+/* Finaliza Estilización Del Body */
+
+/* Inicia Estilizado Del Header */
+header {
+  display: flex;
+  font-family: "RBN", cursive;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.mainNav {
+  width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+  left: 0; /* Posicionamos la cabecera al lado izquierdo */
+  top: 0; /* Posicionamos la cabecera pegada arriba */
+  position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+  background-color: #141414;
 }
 
-#container p {
+.logoHyperX {
+  display: flex;
+}
+
+.logo {
+  width: 155px;
+}
+
+.navBar {
+  background-color: #2f2f32;
+  display: flex;
+  align-items: center;
+}
+
+.navBar ul {
+  list-style: none;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  position: statica;
+}
+
+.navBar ul a {
+  text-decoration: none;
+  color: white;
+  padding: 20px 15px;
   font-size: 16px;
-  line-height: 22px;
+}
 
-  color: #8c8c8c;
+.navBar ul a:hover {
+  color: grey;
+  cursor: pointer;
+}
 
+.secundaryNavBar ul a {
+  text-decoration: none;
+  color: #5d5d5d;
+  padding: 20px 15px;
+  font-size: 16px;
+}
+
+.secundaryNavBar ul a:hover {
+  color: white;
+}
+
+.secundaryNavBar {
+  display: flex;
+  align-items: center;
+}
+
+.secundaryNavBar ul {
+  list-style: none;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
+/* Finaliza Estilizado Del Header */
+
+/* Inicia Estilizado del Main */
+#hero {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#hero img {
+  width: 100%;
+}
+/* Finaliza Estilizado del Main */
+
+#seccion {
+  font-family: "RBN";
+  color: white;
+  padding: 0;
   margin: 0;
 }
 
-#container a {
+.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "RBN";
+}
+
+.product {
+  align-content: center;
+  align-items: center;
+  width: 337.5px;
+  height: 220px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-auto-rows: 220px;
+  width: 1349;
+}
+
+.grid {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.art {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.txt {
+  position: absolute;
+  top: 50%;
+  text-align: left;
+  padding-left: 25px;
+  list-style: none;
+  color: white;
+}
+
+.foot {
+  background-image: url("../../assets/images/footerBack.png");
+  background-repeat: repeat-x;
+  width: 100%;
+  color: white;
+}
+
+.logoFoot {
+  width: 100%;
+  margin: auto;
+}
+
+.logoFoot img {
+  padding-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+.produc-link {
+  padding-left: 100px;
+}
+
+.links {
+  -webkit-column-count: 4; /* Chrome, Safari, Opera */
+  -moz-column-count: 4; /* Firefox */
+  column-count: 4;
+  text-align: left;
+  /* height: 1000px;*/
+  padding: 30px;
+}
+
+.link {
+  list-style: none;
+  width: 170px;
+  font-size: 15px;
+}
+
+.link h3 a {
   text-decoration: none;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.link h3 a:hover {
+  color: orange;
+}
+
+.link h3 {
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.link ul li a {
+  text-decoration: none;
+  color: gray;
+  list-style: none;
+  line-height: 25px;
+}
+
+.link ul li a:hover {
+  color: white;
+}
+
+.link ul li {
+  list-style: none;
+}
+
+.link ul {
+  padding-left: 5px;
+}
+
+.footer {
+  background-color: #585858;
+}
+
+.pie {
+  margin: 0 auto;
+  padding: 10px;
+  font-family: proxima-nova, sans-serif;
+  font-size: 75%;
+  text-align: center !important;
+  max-width: 62.5em;
+  line-height: 1.75;
+  color: darkgrey;
+}
+
+@media screen and (max-width: 1440px) {
+  .grid {
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: 220px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .grid {
+    grid-template-columns: repeat(3, 33.33%);
+    grid-auto-rows: 220px;
+  }
+
+  .links {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+  }
+
+  .navBar {
+    width: 1050px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: 220px;
+  }
+
+  .links {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: 220px;
+  }
+
+  .links {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+  }
+}
+
+.center {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.red {
+  width: 50px;
+  height: 50px;
 }

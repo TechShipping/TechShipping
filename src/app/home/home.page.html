@@ -1,20 +1,110 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header #header class="mainNav">
+    <div style="display: flex; margin: auto; justify-content: center">
+      <figure class="logoHyperX">
+        <a href="#">
+          <img href="#" class="logo" src="assets/images/logoHx.png" alt="Logo HyperX"/>
+        </a>
+      </figure>
+      <nav class="navBar">
+        <ul>
+          <a href="#"><li>Audio</li></a>
+          <a href="#"><li>Teclados</li></a>
+          <a href="#"><li>Memoria</li></a>
+          <a href="#"><li>Ratones</li></a>
+          <a href="#"><li>Móvil</li></a>
+          <a href="#"><li>Alimentación</li></a>
+        </ul>
+      </nav>
+      <nav class="secundaryNavBar">
+        <ul>
+          <a href="#"><li>Soporte</li></a>
+          <a href="#"><li>WE'RE ALL GAMERS</li></a>
+        </ul>
+      </nav>
+    </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content class="content" scrollEvents="true" appHideHeader [header]="header">
+  <main>
+    <img width="100%" src="assets/images/HyperX.gif" alt="">
+      <!-- <video autoplay loop muted width="100%">
+          <source src="assets/images/HyperX.mp4" type="video/mp4">
+          <source src="hyperx.ogg" type="video/ogg">
+        </video> -->
+  </main>
+  <section class="center">
+    <ion-grid style="display: flex; margin: auto; justify-content: center;">
+      <ion-row>
+        <ion-col size-xl="3" size-md="6" size-xs="12" *ngFor="let product of produtos">
+          <ion-card  >
+            <ion-card-header>
+              <ion-card-title>
+                <a href="#"><img class="product" src={{product.img}} alt="Audifonos HyperX"/></a>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <a href="#" style="text-decoration: none; color: black;">
+                <h3>{{product.titulo}}</h3>
+                <h5>{{product.subtitulo}}</h5>
+              </a>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </section>
+
+  <section class="foot" style="background-color: black;">
+      <div class="produc-link">
+        <div class="links">
+          <div class="link" *ngFor="let item of datos">
+            <h3>
+              <a href="#">{{item.tipo}}</a>
+            </h3>
+            <ul>
+              <dl>
+                <dt class="item-labels" slot="start" *ngFor="let des of item?.prod">
+                  <li><a href="#">{{des}}</a></li>
+                </dt>
+              </dl>
+            </ul>
+          </div>
+        </div>
+    </div>
+    <figure class="logoFoot">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="center">
+            <ion-icon class="red" name="logo-facebook" size="large"></ion-icon>
+          </ion-col>
+          <ion-col class="center">
+            <ion-icon class="red" name="logo-youtube" size="large"></ion-icon>
+          </ion-col>
+          <ion-col class="center">
+            <ion-icon class="red" name="logo-instagram" size="large"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="center">
+            <a href="#"><img style="width: 50%;" src="assets/images/logoHx.png" alt="Logo HyperX"></a>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </figure>
+  </section>
+
+
+
+    <footer>
+      <div class="footer">
+          <p class="pie">
+                  ©2019 Kingston Technology Europe Ltd y Kingston Digital Europe Ltd, Kingston Court, Brooklands Close,
+                  Sunbury-on-Thames, Middlesex, TW16 7EP, Reino Unido. Tel: +44 (0) 1932 738888 Fax: +44 (0) 1932 785469
+                  Todos los derechos reservados. Todas las marcas comerciales y marcas registradas son propiedad de sus respectivos titulares.
+        </p>
+      </div>
+    </footer>
 </ion-content>
